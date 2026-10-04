@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wired Office</title>
+  <meta name="description" content="Wired Office — free, open-source documents, spreadsheets and presentations for the Mac. No account, no ads, no subscription.">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/paper.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dots" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      Wired Office
+    </a>
+    <nav>
+      <a href="#apps">Apps</a>
+      <a href="https://github.com/Wired-Office" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow mono">// open source office suite for macOS</p>
+      <h1>Office, <span class="dim">without</span><br>the strings attached.</h1>
+      <p class="lede">Native apps for documents, spreadsheets and presentations. No account. No ads. No subscription. Just software.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#apps">Get the apps <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="https://github.com/Wired-Office" target="_blank" rel="noopener">View source</a>
+      </div>
+      <ul class="facts mono">
+        <li><span>●</span> Swift + AppKit</li>
+        <li><span>●</span> Zero dependencies</li>
+        <li><span>●</span> Opens .docx .xlsx .pptx</li>
+      </ul>
+    </section>
+
+    <section id="apps" class="apps" aria-label="Downloads"></section>
+
+    <section class="manifesto">
+      <div>
+        <p class="mono label">01</p>
+        <h3>Yours, offline.</h3>
+        <p>Your files live on your Mac. Nothing is uploaded, nothing is tracked, no sign-in wall stands between you and your work.</p>
+      </div>
+      <div>
+        <p class="mono label">02</p>
+        <h3>Familiar by design.</h3>
+        <p>Menus, shortcuts and workflows you already know — and the Office formats you already have, open and save.</p>
+      </div>
+      <div>
+        <p class="mono label">03</p>
+        <h3>Always current.</h3>
+        <p>Each app checks GitHub for new releases. This page does too — every button above points at the latest build.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot mono">
+    <span>Wired Office · free &amp; open source</span>
+    <a href="https://github.com/Wired-Office" target="_blank" rel="noopener">github.com/Wired-Office ↗</a>
+  </footer>
+
+  <template id="app-card">
+    <article class="card">
+      <div class="card-head">
+        <img class="icon" width="88" height="88" alt="">
+        <span class="version mono" data-version>…</span>
+      </div>
+      <h2 data-name></h2>
+      <p class="tagline" data-tagline></p>
+      <ul class="features" data-features></ul>
+      <div class="card-foot">
+        <a class="btn btn-download" data-download aria-disabled="true">
+          <span data-label>Checking for latest…</span>
+        </a>
+        <p class="meta mono" data-meta>&nbsp;</p>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
